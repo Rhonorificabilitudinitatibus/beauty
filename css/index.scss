@@ -257,7 +257,127 @@ $font-size:12px;
         }
         .spread{
             float: right;
-            margin-top: 3px
+            margin-top: 3px;
+        }
+    }
+    #sec_nav_wrap {
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(151, 151, 151, .32);
+        .sec_nav {
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 40px;
+            &:after{
+                clear: both;
+                content: ".";
+                display: block;
+                visibility: hidden;
+                height: 0
+            }
+            li {
+                width: 109px;
+                float: left;
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: black;
+                    height: 38px;
+                    &:hover{
+                    border-bottom: 2px solid #f36;
+                    }
+                }
+                .show{
+                    border-bottom: 2px solid #f36;
+                }
+            }
+        }
+    }
+}
+#banner_wrap{
+    width: 100%;
+    .banner{
+        width: 1200px;
+        height: 400px;
+        margin: 0 auto;
+        img{
+            width: 1200px;
+            height: 400px;
+        }
+    }
+}
+#content_wrap{
+    width: 100%;
+    .content{
+        width: 1200px;
+        height: 10000px;
+        margin: 0 auto;
+    }
+}
+#footer_wrap{
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 30px;
+    background: #F5F5F5;
+    border-top: 1px solid #ddd;
+    footer{
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+        .bottom{
+            font-size: 12px;
+            width: 1200px;
+            height: 200px;
+            .first{
+                float:left;
+                line-height: 26px;
+                margin-bottom: 20px;
+                margin-right: 104px;
+                h4{
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    color: #666;
+                }
+                .bottom_link{
+                    line-height: 26px;
+                    margin-top: 12px;
+                    a{
+                        line-height: 26px;
+                        color: #666;
+                        span{
+                           float: left;
+                            width: 18px;
+                            height: 18px;
+                            margin-top: 5px;
+                            margin-right: 5px;
+                            background:url(../img/follow74x18.png); 
+                            line-height: 26px;
+                        }
+                        .bottom_sina{
+                            
+                        }
+                        .bottom_qqzone{
+                            
+                            background-position:-28px 0;
+                            
+                        }
+                        .bottom_weibo{
+                            background-position:-56px 0;
+                        }
+                    }
+                }
+               
+            }
+            .service{
+                margin-left: 228px;
+                 img{
+                    margin-top: 13px;
+                    text-align: center;
+                }
+            }
         }
     }
 }

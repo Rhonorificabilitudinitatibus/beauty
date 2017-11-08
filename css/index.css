@@ -192,5 +192,98 @@ a {
     #head_wrap .inner .spread {
       float: right;
       margin-top: 3px; }
+  #head_wrap #sec_nav_wrap {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.32); }
+    #head_wrap #sec_nav_wrap .sec_nav {
+      width: 1200px;
+      margin: 0 auto;
+      margin-top: 40px; }
+      #head_wrap #sec_nav_wrap .sec_nav:after {
+        clear: both;
+        content: ".";
+        display: block;
+        visibility: hidden;
+        height: 0; }
+      #head_wrap #sec_nav_wrap .sec_nav li {
+        width: 109px;
+        float: left; }
+        #head_wrap #sec_nav_wrap .sec_nav li a {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 700;
+          color: black;
+          height: 38px; }
+          #head_wrap #sec_nav_wrap .sec_nav li a:hover {
+            border-bottom: 2px solid #f36; }
+        #head_wrap #sec_nav_wrap .sec_nav li .show {
+          border-bottom: 2px solid #f36; }
+
+#banner_wrap {
+  width: 100%; }
+  #banner_wrap .banner {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto; }
+    #banner_wrap .banner img {
+      width: 1200px;
+      height: 400px; }
+
+#content_wrap {
+  width: 100%; }
+  #content_wrap .content {
+    width: 1200px;
+    height: 10000px;
+    margin: 0 auto; }
+
+#footer_wrap {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 30px;
+  background: #F5F5F5;
+  border-top: 1px solid #ddd; }
+  #footer_wrap footer {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto; }
+    #footer_wrap footer .bottom {
+      font-size: 12px;
+      width: 1200px;
+      height: 200px; }
+      #footer_wrap footer .bottom .first {
+        float: left;
+        line-height: 26px;
+        margin-bottom: 20px;
+        margin-right: 104px; }
+        #footer_wrap footer .bottom .first h4 {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+          color: #666; }
+        #footer_wrap footer .bottom .first .bottom_link {
+          line-height: 26px;
+          margin-top: 12px; }
+          #footer_wrap footer .bottom .first .bottom_link a {
+            line-height: 26px;
+            color: #666; }
+            #footer_wrap footer .bottom .first .bottom_link a span {
+              float: left;
+              width: 18px;
+              height: 18px;
+              margin-top: 5px;
+              margin-right: 5px;
+              background: url(../img/follow74x18.png);
+              line-height: 26px; }
+            #footer_wrap footer .bottom .first .bottom_link a .bottom_qqzone {
+              background-position: -28px 0; }
+            #footer_wrap footer .bottom .first .bottom_link a .bottom_weibo {
+              background-position: -56px 0; }
+      #footer_wrap footer .bottom .service {
+        margin-left: 228px; }
+        #footer_wrap footer .bottom .service img {
+          margin-top: 13px;
+          text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
