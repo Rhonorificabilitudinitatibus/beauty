@@ -62,6 +62,7 @@ a {
     outline: none;
 }
 $font-size:12px;
+//头部区域
 #head_wrap{
     width:100%;
     font-size: $font-size;
@@ -224,26 +225,7 @@ $font-size:12px;
                     background: #f36 url(../img/search19_17.c5.png) no-repeat center;
                     cursor: pointer;
                 }
-//              .suggest-box{
-//                  border: 1px solid #ddd;
-//                  width: 447px;
-//                  background-color: #fff;
-//                  position: absolute;
-//                  left: 0;
-//                  top: 31px;
-//                  z-index: 999;
-//                  display: none;
-//                  .item{
-//                      line-height: 20px;
-//                      padding: 2px 10px;
-//                      cursor: pointer;
-//                      color: #666
-//                  }
-//                  div.active{
-//                      background-color: #f2f0f1;
-//                      color: #f36;
-//                  }
-//              }
+
             }
            .hotword{
                padding-top: 12px;
@@ -260,15 +242,24 @@ $font-size:12px;
             margin-top: 3px;
         }
     }
+    .sec_nav_fix{
+        position:fixed;
+        top:0;
+        z-index: 10;
+    }
+//  头部的第二个导航
     #sec_nav_wrap {
+        margin-top: 40px;
+        width: 100%;
         height: 40px;
+        background: white;
         line-height: 40px;
         margin-bottom: 10px;
         border-bottom: 1px solid rgba(151, 151, 151, .32);
         .sec_nav {
             width: 1200px;
             margin: 0 auto;
-            margin-top: 40px;
+            
             &:after{
                 clear: both;
                 content: ".";
@@ -296,6 +287,7 @@ $font-size:12px;
         }
     }
 }
+//banner图
 #banner_wrap{
     width: 100%;
     .banner{
@@ -308,6 +300,7 @@ $font-size:12px;
         }
     }
 }
+//中间区域
 #content_wrap{
     width: 100%;
     .content{
@@ -316,6 +309,7 @@ $font-size:12px;
         margin: 0 auto;
     }
 }
+//脚部
 #footer_wrap{
     width: 100%;
     margin-top: 15px;
@@ -324,7 +318,7 @@ $font-size:12px;
     border-top: 1px solid #ddd;
     footer{
         width: 1200px;
-        height: 300px;
+        overflow: hidden;
         margin: 0 auto;
         .bottom{
             font-size: 12px;
@@ -354,10 +348,9 @@ $font-size:12px;
                             margin-top: 5px;
                             margin-right: 5px;
                             background:url(../img/follow74x18.png); 
-                            line-height: 26px;
                         }
                         .bottom_sina{
-                            
+                            background-position: 0 0;
                         }
                         .bottom_qqzone{
                             
@@ -371,13 +364,221 @@ $font-size:12px;
                 }
                
             }
-            .service{
-                margin-left: 228px;
-                 img{
-                    margin-top: 13px;
-                    text-align: center;
+            .aboutus{
+                margin-right: 0;
+                a{
+                    vertical-align: middle;
                 }
             }
+            .service{
+                margin-left: 228px;
+                margin-right: 55px;
+                text-align: center;
+                 img{
+                    display: inline-block;
+                    margin-top: 13px;
+                }
+            }
+            .last{
+                text-align: center;
+                float: left;
+                margin-right: 0;
+                img{
+                    display: inline-block;
+                    margin-top: 13px;
+                }
+            }
+        }
+        .footer_copyright{
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #e6e6e6;
+            line-height: 22px;
+            padding: 12px 192px;
+            text-align: center;
+            a {
+                color: #666;
+            }
+        }
+    }
+}
+//侧边栏
+#slidebar{
+    width: 38px;
+    height: 100%;
+    border-left: 1px solid #ddd;
+    background-color: #F6F6F6;
+    position: fixed;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    z-index: 6;
+    .slide_inner{
+        position: absolute;
+        top: 62px;
+        border-top: 1px solid #ddd;
+        .slide_btn{
+            border-bottom: 1px solid #ddd;
+            line-height: 1.2;
+            .slide_text{
+                width: 40px;
+                height: 20px;
+                display: inline-block;
+                margin-top: 12px;
+                margin-left: -18px;
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -moz-transform: rotate(90deg)
+            }
+            .slide_code{
+                width: 140px;
+                height: 140px;
+                padding: 13px;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                position: absolute;
+                right: 38px;
+                top: 0;
+                display: none;
+                &:after,&:before{
+                    border: solid transparent;
+                    content: '';
+                    height: 0;
+                    left: 100%;
+                    position: absolute;
+                    width: 0;
+                }
+                &:after{
+                    border-width: 10px;
+                    border-left-color: #fff;
+                    top: 55px;
+                }
+                &:before{
+                  border-width: 12px;
+                  border-left-color: #ddd;
+                  top: 53px;
+                }
+                img{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    bottom: 0;
+                    top: 0;
+                }
+            }
+            .slide_num{
+               background-color: #F33866;
+                color: #fff;
+                padding: 0 4px;
+                border-radius: 10px;
+                display: block;
+                position: absolute;
+                top: 4px;
+                right: 2px;
+                z-index: 8;
+            }
+        }
+        .slide_link{
+            display: block;
+            width: 10px;
+            padding-top: 36px;
+            padding-right: 14px;
+            padding-left: 14px;
+            cursor: pointer;
+            line-height: 1.2;
+            color: #666;
+            background: 11px 13px no-repeat;
+            text-decoration: none;
+            &:hover{
+                color: #fff;
+                background-color: #F33866;
+                .slide_num{
+                  background-color: #fff;
+                  color: #F33866;
+                }
+            }
+        }
+        .slide_cart{
+            position: relative;
+            .slide_link{
+                height: 61px;
+                background: url(../img/cart17x13.png) no-repeat 10px 9px;
+                &:hover{
+                   background: #F33866 url(../img/cartH17x13.png) no-repeat 10px 9px; 
+                }
+            }
+        }
+        .slide_service{
+            position: relative;
+            .slide_link{
+                height: 52px;
+                background: url(../img/message17x15.png) no-repeat 11px 13px;
+                &:hover{
+                    background:#F33866 url(../img/messageH17x15.png) no-repeat 11px 13px;
+                }
+            }
+        }
+        .slide_discount{
+            position: relative;
+            .slide_link{
+                height: 56px;
+                background: url(../img/discount18x13.png) no-repeat 11px 13px;
+                &:hover{
+                    background: #F33866 url(../img/discountH18x13.png) no-repeat 11px 13px;
+                }
+            }
+        }
+        .slide_mark{
+            .slide_link{
+                height: 46px;
+                padding-top: 41px;
+                background: url(../img/collect19x18.png) no-repeat 11px 13px;
+                &:hover{
+                    background:#F33866 url(../img/collectH19x18.png) no-repeat 11px 13px;
+                }
+            }
+        }
+        .slide_foot{
+            .slide_link{
+                height: 49px;
+                padding-top: 44px;
+                background: url(../img/foot15x21.png) no-repeat 11px 13px;
+                &:hover{
+                    background: #F33866 url(../img/footH15x21.png) no-repeat 11px 13px;
+                }
+            }
+        }
+        .slide_download{
+            height: 70px;
+            background: url(../img/dl12x18.png) 13px 10px no-repeat;
+            position: relative;
+            padding-top: 41px;
+            &:hover{
+              color: #fff;
+              background: #F33866 url(../img/dlH12x18.png) 13px 10px no-repeat; 
+              .slide_code{
+                  display: block;
+              }
+            }
+        }
+    }
+    .go_top{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 38px;
+        height: 40px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        z-index: 10;
+        display: none;
+        background:  #f8f8f8 url(../img/top14x7.png) no-repeat 12px 16px;
+        &:hover{
+            cursor: pointer;
+            background: #F33866 url(../img/topH14x7.png) no-repeat 12px 16px;
         }
     }
 }

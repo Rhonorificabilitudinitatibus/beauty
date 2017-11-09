@@ -6,10 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	</head>
 	<body>
-			<!--#FF3366-->
 			<!--这是头部区域-->
+			<!--头部外套-->
 		<div id="head_wrap">
+			<!--头部导航外包-->
 			<div id="top_nav_wrap">
+				<!--顶部导航-->
 				<div class="top_nav">
 					<ul>
 						<li class="go-home">
@@ -69,10 +71,12 @@
 					</ul>
 				</div>
 			</div>
+			<!--头部中间的部分：logo、搜索和二维码-->
 			<div class="inner">
 				<a href="index.html" class="logo">
 					<img src="img/logo408x104.png"/>
 				</a>
+				<!--搜索框-->
 				<div class="search">
 					<div class="search-tab">
 						<span class="active">宝贝</span>
@@ -82,6 +86,7 @@
 						<span class="search-btn"></span>
 						<!--<div class="suggest-box"></div>-->
 					</div>
+					<!--搜索热词-->
 					<div class="hotword">
 						<a href="#" style="color:#f36">秋季套装</a>
 						<a href="#" style="color:#666">连衣裙</a>
@@ -95,11 +100,14 @@
 						<a href="#" style="color:#666">包包新款</a>
 					</div>
 				</div>
+				<!--二维码-->
 				<div class="spread">
 					<img src="img/active210x157.gif"/>
 				</div>
 			</div>
+			<!--头部下导航外包-->
 			<div id="sec_nav_wrap">
+				<!--导航-->
 				<ul class="sec_nav">
 					<li class="nav-item">
 						<a href="#" style="color:#f36" class="show">
@@ -158,17 +166,23 @@
 					</li>
 				</ul>
 			</div>
+			<div id="help" style="height:52px;clear:both;display: none;">
+				
+			</div>
 		</div>
+		<!--banner图-->
 		<div id="banner_wrap">
 			<div class="banner">
 				<a href="#"><img src="img/banner2400x800.jpg"/></a>
 			</div>
 		</div>
+		<!--中间内容区域-->
 		<div id="content_wrap">
 			<div class="content">
 				
 			</div>
 		</div>
+		<!--脚步区域-->
 		<div id="footer_wrap">
 			<footer>
 				<div class="bottom">
@@ -239,7 +253,80 @@
 						<img src="img/download100x100.png"/>
 					</div>
 				</div>
+				<div class="footer_copyright">
+					 Copyright ©2017 Meilishuo.com &nbsp;
+					 <a href="#">电信与信息服务业务经营许可证100798号</a> &nbsp;
+					<a href="#">经营性网站备案信息</a> <br />
+					 京ICP备11031139号  &nbsp;京公网安备110108006045 &nbsp;&nbsp;  客服电话：4000-800-577 &nbsp;文明办网文明上网举报电话：010-82615762 &nbsp;
+					 <a href="#">违法不良信息举报中心</a>
+				</div>
 			</footer>
 		</div>
+		<!--侧边栏-->
+		<div id="slidebar">
+			<div class="slide_inner">
+				<div class="slide_download slide_btn slide_link">
+					下载
+					<span class="slide_text">APP</span>
+					<div class="slide_code">
+						<img src="img/app140x140.png" alt="美丽说 App 二维码"/>
+					</div>
+				</div>
+				<div class="slide_cart slide_btn">
+					<a href="#" class="slide_link">
+						<span class="cart_num slide_num"></span>
+						购物车
+					</a>
+				</div>
+				<div class="slide_service slide_btn">
+					<a href="#" class="slide_link">
+						<span class="service_num slide_num">
+							
+						</span>
+						消息
+					</a>
+				</div>
+				<div class="slide_discount slide_btn">
+					<a href="#" class="slide_link">
+						<span class="discount_num slide_num"></span>
+						优惠券
+					</a>
+				</div>
+				<div class="slide_mark slide_btn">
+					<a href="#" class="slide_link">收藏</a>
+				</div>
+				<div class="slide_foot slide_btn">
+					<a href="#" class="slide_link">足迹</a>
+				</div>
+			</div>
+			<div class="go_top" id="gogo"></div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			侧边栏和头部末尾导航的特效
+			$(function(){
+				$(window).scroll(function(){
+					var scrollTop = $(this).scrollTop();
+					if(scrollTop>20){
+						$("#gogo").fadeIn("slow");
+					}else{
+						$("#gogo").fadeOut("slow");
+					}
+					if(scrollTop>=200){
+						$("#sec_nav_wrap").addClass("sec_nav_fix");
+						$("#sec_nav_wrap").css("margin-top",0);
+						$("#help").css("display","block");
+					}else{
+						$("#sec_nav_wrap").removeClass("sec_nav_fix");
+						$("#sec_nav_wrap").css("margin-top","40px");
+						$("#help").css("display","none");
+					}
+				})
+//				点击返回顶部
+				$("#gogo").click(function(){
+					$("html,body").animate({"scrollTop":0},300)
+				})
+			})
+		</script>
 	</body>
 </html>
