@@ -3,11 +3,69 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>测试ajax数据接口</title>
+		<style type="text/css">
+			html,body,ul,li{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			li{
+				list-style: none;
+				width: 224px;
+				height: 340px;
+				background: pink;
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
+		</style>
 	</head>
 	<body>
+		
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			
+			$.ajax({
+				type:"get",
+				url:"http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page=1&_=1510235076598",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+//					console.log(data.data.list);
+					
+					for(var i = 0; i < data.data.list.length; i++){
+						var price = data.data.list[i].discountPrice;
+						var like = data.data.list[i].itemLikes;
+						var clothes = data.data.list[i].title;
+						var pic = data.data.list[i].item_pc_img;
+						var clothes_id = data.data.list[i].item_id;
+//						console.log(data.data.list[i]);
+						console.log(price,like,clothes,pic,clothes_id);
+					}
+				},
+				error:function(data){
+					console.log(data, data.status);
+				}
+			});
 		</script>
 	</body>
 </html>

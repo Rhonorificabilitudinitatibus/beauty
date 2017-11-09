@@ -226,6 +226,35 @@ $font-size:12px;
                     cursor: pointer;
                 }
 
+                #suggest-box {
+                    border: 1px solid #ddd;
+                    width: 446px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 31px;
+                    z-index: 12;
+                    display: none;
+                    li{
+                        line-height: 20px;
+                        padding: 2px 10px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #f2f0f1;
+                            a{
+                               color: #f36; 
+                            }
+                        }
+                        a{
+                            color: #666;
+                            font-size: 12px;
+                        }
+                    }
+                    .choose{
+                        background-color: #f2f0f1;
+                        color: #f36;
+                    }
+                }
             }
            .hotword{
                padding-top: 12px;
@@ -304,9 +333,71 @@ $font-size:12px;
 #content_wrap{
     width: 100%;
     .content{
+        background: skyblue;
         width: 1200px;
         height: 10000px;
         margin: 0 auto;
+        margin-top: 50px;
+        .content_top{
+            &:after{
+                clear: both;
+                content: ".";
+                display: block;
+                visibility: hidden;
+                height: 0;
+            }
+            a{
+                float: right;
+                margin-top: 4px;
+                font-size: 14px;
+                color: #6f6f6f;
+            }
+            .content_nav{
+                text-align: center;
+                .ct_link{
+                        float: left;
+                        position: relative;
+                        font-size: 20px;
+                        height: 28px;
+                        line-height: 28px;
+                        color: #000;
+                        &:hover{
+                            color:#e40045;
+                            em{
+                                display: block;
+                            }
+                        }
+                        em{
+                            display: none;
+                            width: 36px;
+                            height: 3px;
+                            background: #e40045;
+                            margin-left: 22px;
+                        }
+                }
+                .ct_one{
+                    margin-left: 470px;
+                    margin-right: 33px;
+                    color:#e40045;
+                    border-color: #e40045;
+                    em{
+                        display: block;
+                    }
+                }
+            }
+        }
+      .new_content{
+          width: 1200px;
+          background: yellowgreen;
+          margin-top: 20px;
+          height: 846px;
+          #new_list{
+              li{
+                  width: 224px;
+                  height: 403px;
+              }
+          }
+      }  
     }
 }
 //脚部
