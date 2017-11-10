@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试三</title>
+	</head>
+	<body>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+				type:"get",
+
+//				url:"http://item.meilishuo.com/detail/1keog62",
+				url:"http://simba-api.meilishuo.com/mlselection/top/v1/topGoodsList/h5?callback=?&type=mrsx",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+					console.log(data)
+//					console.log(data.data.rows);
+				},
+				error:function(data){
+					console.log(data, data.status);
+				}
+			});
+				
+			})
+			
+		</script>
+	</body>
+</html>

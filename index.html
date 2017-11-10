@@ -88,16 +88,16 @@
 					</div>
 					<!--搜索热词-->
 					<div class="hotword">
-						<a href="#" style="color:#f36">秋季套装</a>
-						<a href="#" style="color:#666">连衣裙</a>
-						<a href="#" style="color:#f36">破洞针织</a>
-						<a href="#" style="color:#666">薄卫衣</a>
-						<a href="#" style="color:#f36">薄外套</a>
-						<a href="#" style="color:#f36">秋季单鞋</a>
-						<a href="#" style="color:#666">牛仔外套</a>
-						<a href="#" style="color:#f36">阔腿裤</a>
-						<a href="#" style="color:#f36">小白鞋</a>
-						<a href="#" style="color:#666">包包新款</a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#666"></a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#666"></a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#666"></a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#f36"></a>
+						<a href="#" style="color:#666"></a>
 					</div>
 				</div>
 				<!--二维码-->
@@ -197,9 +197,18 @@
 						
 					</ul>
 				</div>
+				<!--中间的商品和导航-->
+				<div class="content_middle">
+					<div class="content_middle_top">
+						<span class="keywords">春季新款来袭 买买买</span>
+						<h3 class="middle_title">美丽优选</h3>
+					</div>
+					<ul id="main_list">
+					</ul>
+				</div>
 			</div>
 		</div>
-		<!--脚步区域-->
+		<!--脚部区域-->
 		<div id="footer_wrap">
 			<footer>
 				<div class="bottom">
@@ -394,16 +403,145 @@
 						var hot = data.data[5571].list[i].word;
 						var j = i;
 						var txt = $(".hotword a")[j];
-//						console.log(txt);
-//						txt.text(hot);
+						$(txt).text(hot);
 					}
 				})
 				
-				$.getJSON("http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page=1&_=1510235076598",function(data){
-//				for(var i = 0; i < d)
-				console.log(data)
+//----------------------------------------------------------------
+//				主页新品推荐
+				$.ajax({
+				type: "get",
+				url: "http://simba-api.meilishuo.com/mlselection/top/v1/topGoodsList/h5?callback=?&type=mrsx&cid=mrsx&offset=0&limit=11&_=1510282101113",
+				async: true,
+				dataType: "jsonp",
+				success: function(data) {
+					var str = "";
+//					console.log(data.data.rows.length);
+						
+					for(var i = 0; i < data.data.rows.length; i++) {
+						//价格
+						var price = data.data.rows[i].price;
+						//收藏数量
+						var like = data.data.rows[i].collectNum;
+						//商品名称
+						var intro = data.data.rows[i].title;
+						//图片
+						var pic = data.data.rows[i].image;
+						//ID
+						var clothes_id = data.data.rows[i].signGoodsId;
+						//库存
+						var left = data.data.rows[i].stock;
+//						console.log(data.data.rows[i]);
+						//console.log(price,like,clothes,pic,clothes_id);
+						if(i%10==4||i%10==9){
+//							背景图片
+							str += "<li style=margin-right:0><div id='one' style=background-image:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+//							图片
+							/*str += "<li style=margin-right:0><div id='one'>" + "<img src=" + pic +"></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>"*/
+						}else{
+							str += "<li><div id='one' style=background-image:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+							/*str += "<li><div id='one'>" + "<img src=" + pic +"></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>"*/
+						}
+//						console.log(str)
+						$(".new_content #new_list").html(str);
+//						console.log(pic);
+					}
+					
+				},
+				error: function(data) {
+					console.log(data, data.status);
+				}
+				});
+				
+				
+				
+				var num = 1;
+				
+//				主页商品清单
+				$.ajax({
+				type: "get",
+				//经过调查，page总共有7页，最后一页数目很少
+				url: "http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page="+ num,
+				async: true,
+				dataType: "jsonp",
+				success: function(data) {
+					
+					var str = "";
+//					console.log(num);
+//					console.log(data.data.list);
+						
+//					console.log(data.data.list.length);
+					for(var i = 0; i < data.data.list.length; i++) {
+						
+						var price = data.data.list[i].discountPrice;
+						var like = data.data.list[i].itemLikes;
+						var intro = data.data.list[i].title;
+						var pic = data.data.list[i].item_pc_img;
+						var clothes_id = data.data.list[i].item_id;
+						var left = data.data.list[i].itemInventory
+//						console.log(data.data.list[i]);
+						//console.log(price,like,clothes,pic,clothes_id);
+						if(i%10==4||i%10==9){
+							str += "<li style=margin-right:0><div id='one' style=background:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+						}else{
+							str += "<li><div id='one' style=background:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+						}
+						
+						$(".content_middle").find("#main_list").html(str);
+					}
+					
+					//重新判断何时加载数据
+					$(window).scroll(function(){
+						//滚动条滚动的距离
+						var scrollTop = $(this).scrollTop();
+						//所有内容加起来的高度　　
+			            var scrollHeight = $('body').height();
+			            //剩余内容的高度
+			            var scrollWhole = scrollHeight - scrollTop;
+			            console.log(scrollWhole);
+			            if(scrollWhole < 1300){
+			            	num++; 
+			            	if(num<=7){
+			            		$.ajax({
+				type: "get",
+				url: "http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page="+ num,
+				async: true,
+				dataType: "jsonp",
+				success: function(data) {
+//					var str2 = str;
+					for(var i = 0; i < data.data.list.length; i++) {
+						var price = data.data.list[i].discountPrice;
+						var like = data.data.list[i].itemLikes;
+						var intro = data.data.list[i].title;
+						var pic = data.data.list[i].item_pc_img;
+						var clothes_id = data.data.list[i].item_id;
+						var left = data.data.list[i].itemInventory
+						if(i%10==4||i%10==9){
+							str += "<li style=margin-right:0><div id='one' style=background:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+						}else{
+							str += "<li><div id='one' style=background:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
+						}
+						
+						$(".content_middle").find("#main_list").html(str);
+					}
+					
+				},
+				error: function(data) {
+					console.log(data, data.status);
+				}
+				});
+			            	}
+			            	
+			            	
+			            }
+					});
+					
+				},
+				error: function(data) {
+					console.log(data, data.status);
+				}
+				});
 				})
-			})
 		</script>
 	</body>
 </html>

@@ -16,56 +16,107 @@
 			li{
 				list-style: none;
 				width: 224px;
-				height: 340px;
+				height: 403px;
 				background: pink;
 				float: left;
 				margin-right: 20px;
 				margin-bottom: 20px;
+			}
+			#one{
+				width: 224px;
+				height: 340px;
+				/*background: url(http://s3.mogucdn.com/p2/170629/upload_6862ei2gf1g0jle30bb4i25jdb9cd_1600x2250.jpg_224x340.jpg);*/
+			}
+			.part{
+				width: 224px;
+				height: 30px;
+				background: gray;
+				margin-top: 5px;
+				line-height: 30px;
+			}
+			.end{
+				width: 224px;
+				height: 28px;
+				background:yellow;
+				font-size: 14px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.price{
+				display: inline-block;
+				font-size: 16px;
+				color: #f36;
+				margin-right: 2px;
+			}
+			.like{
+				float: right;
+				line-height: 14px;
+				font-size: 14px;
+				margin-top: 6px;
+				margin-left: 3px;
+				color: #999;
+				background: white;
+				
+			}
+			.star{
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				background:url(img/like.png) center no-repeat;
+				background-size: 100%;
+			}
+			
+			.icon_logo{
+				display: inline-block;
+				width: 38px;
+				height: 20px;
+				margin-right: 4px;
+				background: url(img/common90x42.png) no-repeat center;
+				background-size: contain;
+				vertical-align: sub;
 			}
 		</style>
 	</head>
 	<body>
 		
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
 		</ul>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$.ajax({
+			$(function(){
+				$.ajax({
 				type:"get",
 				url:"http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page=1&_=1510235076598",
 				async:true,
 				dataType:"jsonp",
 				success:function(data){
 //					console.log(data.data.list);
-					
+					var str = "";
 					for(var i = 0; i < data.data.list.length; i++){
 						var price = data.data.list[i].discountPrice;
 						var like = data.data.list[i].itemLikes;
-						var clothes = data.data.list[i].title;
+						var intro = data.data.list[i].title;
 						var pic = data.data.list[i].item_pc_img;
+						var pic1 = data.data.list[1].item_pc_img;
+						
 						var clothes_id = data.data.list[i].item_id;
+						var left = data.data.list[i].itemInventory
 //						console.log(data.data.list[i]);
-						console.log(price,like,clothes,pic,clothes_id);
+						console.log(pic1)
+//						console.log(price,like,clothes,pic,clothes_id);
+						str += "<li><div id='one'>" + "<img src=" + pic +"></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>"
+						$("ul").html(str);
 					}
+					
 				},
 				error:function(data){
 					console.log(data, data.status);
 				}
 			});
+				
+			});
+			
 		</script>
 	</body>
 </html>

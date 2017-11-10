@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>test2</title>
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+				type:"get",
+//				url:"http://simba-api.meilishuo.com/mlselection/top/v1/topGoodsList/h5?callback=?&type=mrsx",
+//				1koeg6a
+				url:"http://mce.meilishuo.com/jsonp/get/3?callback=?&offset=0&frame=0&trace=0&limit=10&endId=0&pid=78492&page=1",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+					console.log(data)
+//					console.log(data.data.rows);
+				},
+				error:function(data){
+					console.log(data, data.status);
+				}
+			});
+				
+			})
+			
+		</script>
+	</body>
+
+</html>
