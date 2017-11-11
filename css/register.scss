@@ -1,0 +1,152 @@
+@charset "utf-8";
+#top-wrap{
+    width: 100%;
+    padding: 20px 0;
+    #top{
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        a{
+            display: inline-block;
+            width: 220px;
+            height: 52px;
+            background: url(../img/logo408x104.png);
+            background-size: 100%;
+        }
+    } 
+}
+#content-wrap{
+    width: 100%;
+    font-size:12px;
+    font-weight: 400;
+    height: 600px;
+    background: url(../img/register_banner1920x600.png) no-repeat center;
+    #left-banner{
+            width: 62.5%;
+            float: left;
+            display: inline;
+            height: 600px;
+            a{
+                    display: block;
+                    width: 700px;
+                    margin-left: 56px;
+                    margin-top: 80px;
+                    height: 440px;
+                    overflow: hidden;
+            }
+    }
+    #right-banner{
+            width: 356px;
+            float: left;
+            display: inline;
+            border: 1px solid #dcdcdc;
+            padding: 0 0 30px 44px;
+            background-color: #ffeceb;
+            margin-top: 80px;
+            opacity: .9;
+            .regist{
+                margin-left: -38px;
+                h3{
+                    font-size: 14px;
+                    color: #333;
+                    padding: 7px 40px;
+                    height: 42px;
+                    line-height: 42px;
+                    border-bottom: 1px solid #ccc;
+                    font-weight: bold;
+                }
+            }
+            .regist-msg{
+                margin-top: 20px;
+                p {
+                    background:#fffff8 url(../img/error16x16.png) 12px no-repeat;
+                    border: 1px solid #ffd797;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #ff1877;
+                    width: 273px;
+                    padding-left: 40px;
+                    margin-bottom: 9px;
+                    display: none;
+                }
+                .phone-coat{
+                        position: relative;
+                        margin-bottom: 15px;
+                    #userphone{
+                            height: 40px;
+                            width: 300px;
+                            border: 1px solid #ccc;
+                            padding: 0 6px;
+                            font-size: 12px;
+                            background: #ffeceb;
+                    }
+                }
+                .code-coat{
+                    position: relative;
+                    margin-bottom: 15px;
+                    &:after{
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        visibility: hidden;
+                        height: 0;
+                    }
+                    a {
+                        float: left;
+                        margin-right: 10px;
+                        width: 110px;
+                        height: 42px;
+                        background: #ff5777;
+                        border-radius: 2px;
+                        color: #fff;
+                        line-height: 42px;
+                        text-align: center;
+                    }
+                    #code{
+                            border-color: #CFCFCF;
+                            height: 40px;
+                            border: 1px solid #ccc;
+                            padding: 0 6px;
+                            float: left;
+                            width: 180px;
+                            font-size: 12px;
+                            background: #ffeceb;
+                    }
+                }
+                .click-regist{
+                    position: relative;
+                    margin-bottom: 15px;
+                    #sub{
+                        display: inline;
+                        border: none;
+                        width: 314px;
+                        height: 40px;
+                        background: #ff5777;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: 12px;
+                    }
+                    
+                }
+                .regist-rule {
+                    position: relative;
+                    margin-bottom: 15px;
+                    label {
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .login-txt{
+                    .suc {
+                        float: right;
+                        margin-right: 40px;
+                        color: #666;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+    }
+}

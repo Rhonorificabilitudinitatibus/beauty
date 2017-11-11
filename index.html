@@ -354,24 +354,16 @@
 				})
 				//搜索框自动候选
 				$('.search-txt').bind('input propertychange', function() {
-//					console.log(this.value);
 					$('#suggest-box').css('display','block');
 					var inContent = this.value;
 					$.ajax({
 							type:"get",
 					url:"http://rec.mogujie.com/jsonp/recommend/1?callback=?&pid=17721&p_keyWord="+ inContent,
-//					url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+"为什么"+"&cb=?",
 					async:true,
 					dataType:"jsonp",
 					success:function(data){
-//					console.log(data.data.data)
-/*					for(var i in data.data.data){
-						
-						console.log(data.data.data[i].tag)
-					}*/
 					var str = "";
 					for(var i = 0; i < data.data.data.length; i++){
-//						console.log(i)
 						str += "<li><a href='#'>" + data.data.data[i].tag + "</a></li>";
 //						oUl.innerHTML = str;
 						$("#suggest-box").html(str);
