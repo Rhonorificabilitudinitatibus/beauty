@@ -1,0 +1,968 @@
+@charset "utf-8";
+body{
+    font-size: 12px;
+}
+#shop-wrap{
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    .shop{
+        width: 1200px;
+        margin: 0 auto;
+        &:after{
+            clear: both;
+            content: ".";
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+        .shop-infor{
+            position: relative;
+            width: 507px;
+            height: 70px;
+            float:left;
+            .pic1{
+                 float: left;
+                 margin-left: 20px;
+                 .icon1{
+                     width: 40px;
+                     height: 40px;
+                     border-radius: 50%;
+                     margin-top: 15px;
+                     float: left;
+                     border: 0;
+                     vertical-align: middle;
+                 }
+            }
+            .shop-name{
+                padding-left: 10px;
+                margin-top: 15px;
+                width: 240px;
+                float: left;
+                .name-wrap{
+                    font-size: 14px;
+                    overflow: hidden;
+                    height: 20px;
+                    line-height: 20px;
+                    display: block;
+                    font-weight: 400;
+                    &:after{
+                        clear: both;
+                        content: ".";
+                        display: block;
+                        visibility: hidden;
+                        height: 0;
+                    }
+                    .name{
+                            float: left;
+                            margin-right: 5px;
+                            display: inline-block;
+                            width: 130px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            color: #333;
+                            white-space: nowrap;
+                            word-break: break-all;
+                    }
+                }
+                .shop-score{
+                    position: relative;
+                    width: 240px;
+                    z-index: 20;
+                    padding-bottom: 30px;
+                    p{
+                        .biu{
+                            color: #666;
+                            margin-right: 5px;
+                            b {
+                                color: #ef2f23;
+                                font-weight: 400;
+                                padding-left: 2px;
+                            }
+                        }
+                    }
+                    .shop-show{
+                            display: none;
+                            position: absolute;
+                            top: 36px;
+                            left: -70px;
+                            width: 505px;
+                            background-color: #f6f6f6;
+                            border: 1px solid #ededed;
+                            border-top: 0;
+                            &:after{
+                                clear: both;
+                                content: ".";
+                                display: block;
+                                visibility: hidden;
+                                height: 0;
+                            }
+                        .show-content{
+                            &:after{
+                                clear: both;
+                                content: ".";
+                                display: block;
+                                visibility: hidden;
+                                height: 0;
+                            }
+                            .info-box{
+                                float: left;
+                                width: 220px;
+                                min-height: 250px;
+                                overflow: hidden;
+                                border-right: 1px solid #dedede;
+                                .list1{
+                                    float: left;
+                                    overflow: hidden;
+                                    padding: 5px 0;
+                                    li{
+                                        line-height: 26px;
+                                        color:#333;
+                                        .tag{
+                                            width: 85px;
+                                            display: inline-block;
+                                            text-align: right;
+                                            color: #999;
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            
+                           .list2 {
+                               float: left;
+                               overflow: hidden;
+                               width: 150px;
+                               margin: 0 0 5px 15px;
+                               li {
+                                   line-height: 26px;
+                                   .total {
+                                       color: #f36;
+                                   }
+                                   .low{
+                                       color:#1aca60;
+                                   }
+                               }
+                           }
+                           
+                           .list3 {
+                               width: 80px;
+                               float: left;
+                               overflow: hidden;
+                               li {
+                                   line-height: 26px;
+                                   .tag {
+                                       background-color: #f36;
+                                       color: #fff;
+                                       padding: 2px;
+                                       margin-right: 5px;
+                                       .total {
+                                           color: #333;
+                                       }
+                                   }
+                                   .down{
+                                       background-color: #8dc341;
+                                       color: #fff;
+                                       padding: 2px;
+                                       margin-right: 5px;
+                                   }
+                               }
+                           }
+                           .list4{
+                               padding: 5px 0;
+                               width: 150px;
+                               margin-left: 15px;
+                               border-top: 1px dashed #dedede;
+                               float: left;
+                               overflow: hidden;
+                               li{
+                                   line-height: 26px;
+                                   .total{
+                                       color:#f36;
+                                   }
+                               }
+                           }
+                           .list5{
+                               padding: 5px 0;
+                               width: 70px;
+                               border-top: 1px dashed #dedede;
+                               float: left;
+                               overflow: hidden;
+                               li{
+                                   line-height: 26px;
+                               }
+                           } 
+                        }
+                    }
+                }
+            }
+            .shop-action {
+                margin-top: 24px;
+                float:left;
+                .col {
+                    float:left;
+                    padding: 0 12px 0 22px!important;
+                    background-position: 4px -48px;
+                    font-size: 12px;
+                    color: #666;
+                    height: 20px;
+                    line-height: 20px;
+                    margin-right: 10px;
+                    background-color: #fff;
+                    background-image:url(../img/small270x400.png);
+                    background-repeat: no-repeat;
+                    margin-left: 8px;
+                }
+                .contact{
+                    border: 1px solid #ddd;
+                    height: 20px;
+                    line-height: 20px;
+                    padding: 0 5px;
+                    background-color: #fff;
+                    float: left;
+                    color:#333;
+                    .talk{
+                        line-height: 20px;
+                        float:left;
+                        padding-left: 20px;
+                        background: url(../img/kefu16x17.gif) no-repeat;
+                    }
+                }
+            }
+            .shop-show-score {
+                display: inline-block;
+                position: absolute;
+                right: 30px;
+                top: 33px;
+                width: 30px;
+                height: 46px;
+                cursor: pointer;
+                background: url(../img/arr7x4.png) no-repeat 100% 0;
+            }
+            .line-right {
+                width: 1px;
+                background: #eee;
+                margin-top: 15px;
+                height: 40px;
+                margin-left: 28px;
+                float:right;
+            }
+        }
+        .shop-search{
+            margin: 18px 0 0;
+            padding-left: 24px;
+            float: right;
+            .nav-search{
+                position: relative;
+                z-index: 40;
+                float: left;
+                .txt{
+                    float: left;
+                    background: #fff;
+                    vertical-align: middle;
+                    width: 400px;
+                    height: 26px;
+                    overflow: hidden;
+                    padding: 0 8px;
+                    line-height: 26px;
+                    border: 2px solid #ef2f23;
+                }
+                .btn {
+                    float: left;
+                    vertical-align: middle;
+                    border: 0;
+                    background-color: #ef2f23;
+                    color: #fff;
+                    height: 30px;
+                    width: 72px;
+                    cursor: pointer;
+                }
+                .local-search{
+                    vertical-align: middle;
+                    background-color: #fff;
+                    color: #ef2f23;
+                    border: 1px solid #ef2f23;
+                    height: 28px;
+                    width: 72px;
+                    cursor: pointer;
+                    display: inline-block;
+                    line-height: 28px;
+                    text-align: center;
+                    float: right;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+#logo-wrap{
+    width: 100%;
+    .logo-content{
+            overflow: hidden;
+            height: 150px;
+            .bg-img{
+                    height: 150px;
+                    display: block;
+                    background: url(../img/bannerbg2000x120.png) center no-repeat;
+            }
+    }
+}
+.blackStyle{
+    background: rgba(0,0,0,.75);
+}
+.mod_topNav{
+    margin-top: -30px;
+    position: relative;
+    z-index: 19;
+    overflow: visible;
+    .mod_list {
+        overflow: visible;
+        height: 30px;
+        margin-bottom: 20px;
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            font-size: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .mod_item {
+            border: none;
+            overflow: visible;
+            .top-nav {
+                line-height: 30px;
+                position: relative;
+                width: 1200px;
+                margin: 0 auto;
+                li {
+                    float: left;
+                    position: relative;
+                    font-size: 14px;
+                    z-index: 2;
+                    padding: 7px 0;
+                }
+                a {
+                    border-right: 1px solid #5c5c5c;
+                    display: block;
+                    color: #fff;
+                    padding: 0 20px;
+                    line-height: 16px;
+                }
+                
+                .other,.category_list {
+                    display: none;
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    width: 150px;
+                    line-height: 32px;
+                    background-color: rgba(0, 0, 0, .75);
+                    a{
+                        &:hover{
+                            background-color: #666;
+                        }
+                    }
+                    .subMenu {
+                        overflow: visible;
+                        position: relative;
+                        .category_list {
+                            left: 150px;
+                            top: 0;
+                            dd {
+                                display: block;
+                                height: 32px;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 12px;
+                        background: url(../img/rightarrow_4x7.png) no-repeat 14px 13px;
+                        transition: background-color .3s;
+                        border: none;
+                        height: 32px;
+                        line-height: 32px;
+                        padding: 0 26px;
+                    }
+                }
+                .slide{
+                    left:68px;
+                }
+                ol{
+                    height: 30px;
+                    display: block;
+                    li {
+                        
+                        a {
+                            
+                            em {
+                                border-top: 4px solid #fff;
+                                display: inline-block;
+                                width: 0;
+                                height: 0;
+                                position: relative;
+                                top: 0;
+                                left: 2px;
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-bottom: 4px solid transparent;
+                            }
+                            .other {
+                                dl{
+                                    display: block;
+                                    dd {
+                                        display: block;
+                                        height: 32px;
+                                        line-height: 32px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .whole{
+                        a {
+                            padding: 0 38px 0 25px;
+                            background: url(../img/whole200x500.png) no-repeat 86px -191px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+#body_wrap{
+    width: 100%;
+    .shop-detail{
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        .product-wrap {
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+            min-height: 680px;
+            &:after {
+                content: ".";
+                display: block;
+                height: 0;
+                font-size: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            .product {
+                background: salmon;
+                position: relative;
+                width: 1058px;
+                background: #fff;
+                z-index: 7;
+                overflow: hidden;
+                .product-detail{
+                    &:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        font-size: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+                    .goods {
+                        width: 100%;
+                        min-height: 530px;
+                        float:left;
+                        .info-box{
+                            padding: 0 90px 25px 431px;
+                            overflow: hidden;
+                            .goods-title {
+                                color: #333;
+                                width: 100%;
+                                margin-bottom: 15px;
+                                font-size: 24px;
+                                line-height: 25px;
+                                font-weight: bold;
+                            }
+                            .goods-bg{
+                                width: 540px;
+                                border-bottom: 1px solid #f3f3f3;
+                                border-top: 1px solid #f3f3f3;
+                                background: url(../img/goodsbg540x163.png) repeat-y;
+                                background-position: 0 top;
+                                .goods-msg{
+                                    &:after {
+                                        content: ".";
+                                        display: block;
+                                        height: 0;
+                                        font-size: 0;
+                                        clear: both;
+                                        visibility: hidden;
+                                    }
+                                    .goods-msg-box {
+                                        padding-bottom: 0;
+                                        min-height: 20px;
+                                        padding-left: 10px;
+                                        position: relative;
+                                        border-bottom: none;
+                                        margin:0;
+                                        &:after {
+                                            content: ".";
+                                            display: block;
+                                            height: 0;
+                                            font-size: 0;
+                                            clear: both;
+                                            visibility: hidden;
+                                        }
+                                        .money {
+                                            color: #999;
+                                            position: absolute;
+                                            font-size: 12px;
+                                            height: 32px;
+                                            line-height: 32px;
+                                            display: block;
+                                        }
+                                        .count {
+                                            padding-left: 60px;
+                                            width: 282px;
+                                            height: auto;
+                                            margin-left: -6px;
+                                            font-size: 14px;
+                                            color: #999;
+                                            line-height: 32px;
+                                            float: left;
+                                            display: block;
+                                            #now-price {
+                                                color: #ef2f23;
+                                                font-size: 24px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                font-weight: 700;
+                                                float: left;
+                                                line-height: 32px;
+                                            }
+                                        }
+                                        .box-right {
+                                            padding-left: 0;
+                                            line-height: 32px;
+                                            margin-right: 10px;
+                                            color: #999;
+                                            float:right;
+                                            display: block;
+                                            .mr10{
+                                                margin-right: 10px;
+                                                .number{
+                                                    color: #333;
+                                                }
+                                            }
+                                            .sale-num{
+                                                color: #333;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .goods-kefu{
+                                margin-top: 15px;
+                                .kefu-content {
+                                    min-height: 20px;
+                                    padding-left: 10px;
+                                    padding-bottom: 15px;
+                                    position: relative;
+                                    display: block;
+                                    &:after {
+                                        content: ".";
+                                        display: block;
+                                        height: 0;
+                                        font-size: 0;
+                                        clear: both;
+                                        visibility: hidden;
+                                    }
+                                    dt {
+                                        color: #999;
+                                        position: absolute;
+                                        font-size: 12px;
+                                    }
+                                    dd{
+                                        padding-left: 60px;
+                                        .contact-kefu {
+                                            cursor: pointer;
+                                            display: inline-block;
+                                            padding-left: 20px;
+                                            background: url(../img/kefu16x17.gif) no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                            .goods-content{
+                                //这个是点击购买后出来的选择商品属性
+                                height: 270px;
+                                width: 485px;
+                                margin-bottom: 20px;
+                                margin-right: 15px;
+                                margin-left: -10px;
+                                .cont {
+                                    //这个是点击购买后出来的选择商品属性
+                                    border: 1px solid #ef2f23;
+                                    position: relative;
+                                    z-index: 10;
+                                    background-color: #fff;
+                                    padding: 5px 10px 0;
+                                    margin: -5px 0 0;
+                                    .choose-title {
+                                        text-indent: 10px;
+                                        background: #f6f6f6;
+                                        display: block;
+                                        height: 24px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        line-height: 24px;
+                                        .goods-info {
+                                            color: #ef2f23;
+                                        }
+                                        .close {
+                                            background-image: url(../img/close_221x704.png);
+                                            background-position: -10px -147px;
+                                            background-repeat: no-repeat;
+                                            overflow: hidden;
+                                            display: block;
+                                            position: absolute;
+                                            z-index: 10;
+                                            height: 18px;
+                                            width: 18px;
+                                            top: 5px;
+                                            right: 0;
+                                            cursor: pointer;
+                                            color: #666;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    .small-box{
+                                        margin-top: 40px;
+                                        .choose-color {
+                                            min-height: 20px;
+                                            padding-left: 10px;
+                                            padding-bottom: 15px;
+                                            position: relative;
+                                            &:after {
+                                                content: ".";
+                                                display: block;
+                                                height: 0;
+                                                font-size: 0;
+                                                clear: both;
+                                                visibility: hidden;
+                                            }
+                                            dt {
+                                                color: #999;
+                                                position: absolute;
+                                                font-size: 12px;
+                                            }
+                                            dd {
+                                                padding-left: 60px;
+                                                .style-list {
+                                                    max-height: 110px;
+                                                    overflow-y: auto;
+                                                    &:after {
+                                                        content: ".";
+                                                        display: block;
+                                                        height: 0;
+                                                        font-size: 0;
+                                                        clear: both;
+                                                        visibility: hidden;
+                                                    }
+                                                    .img-color {
+                                                        padding: 0;
+                                                        border: 2px solid #666;
+                                                        line-height: 28px;
+                                                        margin: -1px 14px 4px -1px;
+                                                        float: left;
+                                                        position: relative;
+                                                        img {
+                                                            width: 45px;
+                                                            height: 45px;
+                                                            cursor: pointer;
+                                                        }
+                                                        b {
+                                                            display: block;
+                                                            position: absolute;
+                                                            bottom: 0;
+                                                            right: 0;
+                                                            width: 11px;
+                                                            height: 11px;
+                                                            background: url(../img/choose11x11.png) 100% 100% no-repeat;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .choose-size {
+                                            min-height: 20px;
+                                            padding-left: 10px;
+                                            padding-bottom: 15px;
+                                            position: relative;
+                                            &:after {
+                                                content: ".";
+                                                display: block;
+                                                height: 0;
+                                                font-size: 0;
+                                                clear: both;
+                                                visibility: hidden;
+                                            }
+                                            dt {
+                                                color: #999;
+                                                position: absolute;
+                                                font-size: 12px;
+                                            }
+                                            dd{
+                                                padding-left: 60px;
+                                                .size-list {
+                                                    max-height: 110px;
+                                                    overflow-y: auto;
+                                                    &:after {
+                                                        content: ".";
+                                                        display: block;
+                                                        height: 0;
+                                                        font-size: 0;
+                                                        clear: both;
+                                                        visibility: hidden;
+                                                    }
+                                                    li {
+                                                        margin: 0 10px 5px 0;
+                                                        cursor: pointer;
+                                                        float: left;
+                                                        padding: 0 10px;
+                                                        font-weight: 700;
+                                                        line-height: 28px;
+                                                        border: 1px solid #ddd;
+                                                    }
+                                                    .disable {
+                                                        border: 1px dashed #ccc;
+                                                        color: #ccc;
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }
+                                        .sum {
+                                            min-height: 20px;
+                                            padding-left: 10px;
+                                            padding-bottom: 15px;
+                                            position: relative;
+                                            &:after {
+                                                content: ".";
+                                                display: block;
+                                                height: 0;
+                                                font-size: 0;
+                                                clear: both;
+                                                visibility: hidden;
+                                            }
+                                            dt {
+                                                color: #999;
+                                                position: absolute;
+                                                font-size: 12px;
+                                            }
+                                            .shu{
+                                                padding-left: 60px;
+                                                &:after {
+                                                    content: ".";
+                                                    display: block;
+                                                    height: 0;
+                                                    font-size: 0;
+                                                    clear: both;
+                                                    visibility: hidden;
+                                                }
+                                                #goodsNum {
+                                                    position: relative;
+                                                    width: 95px;
+                                                    height: 25px;
+                                                    zoom: 1;
+                                                    border: 1px solid #ddd;
+                                                    float: left;
+                                                    .num-reduce {
+                                                        float: left;
+                                                        width: 24px;
+                                                        height: 25px;
+                                                        display: inline-block;
+                                                        cursor: pointer;
+                                                        opacity: .3;
+                                                        background-position: -3px 2px;
+                                                        background-repeat: no-repeat;
+                                                        overflow: hidden;
+                                                        background-image: url(../img/close_221x704.png);
+                                                    }
+                                                    .num-input {
+                                                        width: 44px;
+                                                        text-align: center;
+                                                        color: #000;
+                                                        font-size: 14px;
+                                                        border: 0;
+                                                        height: 25px;
+                                                        border-left: 1px solid #ddd;
+                                                        border-right: 1px solid #ddd;
+                                                        float: left;
+                                                        background: none;
+                                                    }
+                                                    .num-add {
+                                                        float: left;
+                                                        width: 24px;
+                                                        height: 25px;
+                                                        display: inline-block;
+                                                        cursor: pointer;
+                                                        opacity: .3;
+                                                        background-image: url(../img/close_221x704.png);
+                                                        background-repeat: no-repeat;
+                                                        overflow: hidden;
+                                                        background-position: -3px -78px;
+                                                    }
+                                                }
+                                                .goods-stock {
+                                                    height: 25px;
+                                                    line-height: 25px;
+                                                    margin-left: 10px;
+                                                    color: #999;
+                                                    float: left;
+                                                }
+                                                .goods-stock-tip {
+                                                    display: none;
+                                                    background-image: url(../img/close_221x704.png);
+                                                    background-position: -10px -175px;
+                                                    background-repeat: no-repeat;
+                                                    overflow: hidden;
+                                                    height: 25px;
+                                                    line-height: 25px;
+                                                    margin-left: 20px;
+                                                    color: #ef2f23;
+                                                    padding-left: 22px;
+                                                    float: left;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                                .goods-buy {
+                                    padding: 5px 0 20px 60px;
+                                    &:after {
+                                        content: ".";
+                                        display: block;
+                                        height: 0;
+                                        font-size: 0;
+                                        clear: both;
+                                        visibility: hidden;
+                                    }
+                                    #buy {
+                                        width: 200px;
+                                        background: #ef2f23;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        display: inline-block;
+                                        text-align: center;
+                                        font-size: 20px;
+                                        color: #fff;
+                                        margin-right: 10px;
+                                        float: left;
+                                    }
+                                    #buycart {
+                                        position: relative;
+                                        color: #333;
+                                        border: 1px solid #ddd;
+                                        width: 198px;
+                                        display: inline-block;
+                                        text-align: center;
+                                        font-size: 20px;
+                                        height: 48px;
+                                        line-height: 48px;
+                                        margin-right: 10px;
+                                        float: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .goods-topimg {
+                        margin-left: -100%;
+                        width: 400px;
+                        overflow: hidden;
+                        float: left;
+                        .big-img {
+                            width: 400px;
+                            height: 600px;
+                            overflow: hidden;
+                            position: relative;
+                            .middle {
+                                width: 100%;
+                                height: 100%;
+                                background-color: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center; 
+                                img{
+                                    width: 400px;
+                                    margin: auto 0;
+                                }
+                            }
+                        }
+                        .small-img {
+                            position: relative;
+                            .pic-box {
+                                margin-top: 10px;
+                                padding: 0 32px;
+                                .pic-box-list {
+                                    overflow: hidden;
+                                    position: relative;
+                                    height: 59px;
+                                    .bx {
+                                        text-align: center;
+                                        margin-right: -15px;
+                                        &:after {
+                                            content: ".";
+                                            display: block;
+                                            height: 0;
+                                            font-size: 0;
+                                            clear: both;
+                                            visibility: hidden;
+                                        }
+                                        li {
+                                            width: 60px;
+                                            opacity: .5;
+                                            margin-right: 10px;
+                                            cursor: pointer;
+                                            display: inline-block;
+                                            position: relative;
+                                            &:hover{
+                                                opacity: 1;
+                                            }
+                                            &:hover i{
+                                                display: block;
+                                            }
+                                            img {
+                                                width: 60px;
+                                                vertical-align: middle;
+                                                cursor: pointer;
+                                            }
+                                            i {
+                                                //鼠标滑过特效
+                                                display: none;
+                                                height: 2px;
+                                                width: 60px;
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 1px;
+                                                border: none;
+                                                background: #ef2f23;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -51,7 +51,7 @@
         font-weight: bold; }
     #content-wrap #right-banner .regist-msg {
       margin-top: 20px; }
-      #content-wrap #right-banner .regist-msg p {
+      #content-wrap #right-banner .regist-msg .error-tip {
         background: #fffff8 url(../img/error16x16.png) 12px no-repeat;
         border: 1px solid #ffd797;
         height: 30px;
@@ -83,7 +83,7 @@
         #content-wrap #right-banner .regist-msg .code-coat a {
           float: left;
           margin-right: 10px;
-          width: 110px;
+          width: 112px;
           height: 42px;
           background: #ff5777;
           border-radius: 2px;
@@ -99,6 +99,23 @@
           width: 180px;
           font-size: 12px;
           background: #ffeceb; }
+        #content-wrap #right-banner .regist-msg .code-coat .fournumber {
+          display: none;
+          clear: both;
+          width: 110px;
+          height: 42px;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: bold;
+          color: dodgerblue;
+          letter-spacing: 2px;
+          text-align: center;
+          float: left;
+          background: #ff5777;
+          border-radius: 2px;
+          line-height: 42px;
+          padding: 0;
+          margin-top: 15px; }
       #content-wrap #right-banner .regist-msg .click-regist {
         position: relative;
         margin-bottom: 15px; }

@@ -23,15 +23,16 @@
 				<div class="regist-msg">
 					<p class="error-tip">请输入手机号码</p>
 					<div class="phone-coat">
-						<input type="text" name="tel" id="userphone" value="" placeholder="手机号码" maxlength="11"/>
+						<input type="text" name="tel" id="userphone" value="" placeholder="手机号码" maxlength="11" class="test"/>
 					</div>
 					<div class="code-coat">
-						<a href="javascript:" class="getCode">点击获取验证码</a>
-						<input type="text" name="checkcode" id="code" placeholder="验证码"/>
+						<a href="javascript:" class="getCode step1">点击获取验证码</a>
+						<input type="text" name="checkcode" id="code" placeholder="验证码" class="test"/>
+						<p class="fournumber"></p>
 					</div>
 					<!--立即注册-->
 					<div class="click-regist">
-						<input type="button" name="" id="sub" value="立即注册" />
+						<input type="button" name="" id="sub" value="立即注册" class="step1"/>
 					</div>
 					<div class="regist-rule">
 						<label>
@@ -131,7 +132,80 @@
 		</div>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			
+			$(function() {
+			function change() {
+				four = $(".fournumber");
+				// 验证码组成库
+				var arrays = new Array(
+					'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+					'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+					'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+					'u', 'v', 'w', 'x', 'y', 'z',
+					'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+					'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+					'U', 'V', 'W', 'X', 'Y', 'Z'
+				);
+				fourth = ''; // 重新初始化验证码
+				for(var i = 0; i < 4; i++) {
+					// 随机获取一个数组的下标
+					var r = parseInt(Math.random() * arrays.length);
+					fourth += arrays[r];
+				}
+				// 验证码添加到input里
+				four.html(fourth);
+				}
+				change();
+				four.click(change);
+
+				
+				$("#sub").click(function() {
+					var inputCode = $("#code").val().toUpperCase(); //取得输入的验证码并转化为大写 
+					console.log(inputCode);
+					if(inputCode.length == 0) { 
+						$(".error-tip").show().html("请输入验证码");
+					}
+					if(inputCode != fourth.toUpperCase()) { //若输入的验证码与产生的验证码不一致时
+						$(".error-tip").show().html("短信校验失败，请重试"); //则弹出验证码输入错误
+						change(); //刷新验证码
+						$("#code").val(""); //清空文本框
+					}
+					if(inputCode == fourth.toUpperCase()){
+						$(".error-tip").hide();
+					}
+				});
+				
+				$(".step1").click(function(){
+					var telephone = $("#userphone").val();
+					var telephone1=/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+					if(telephone==""){
+						$(".error-tip").show();
+						$(".error-tip").html("请输入手机号码")
+					}
+					if(telephone1.test(telephone)){
+						$(".getCode").click(function(){
+						$(".fournumber").show();
+						$("#sub").click(function(){
+							if(check.checked){
+								$(".error-tip").hide();
+								alert("恭喜您，注册成功！")
+								location.href = "index.html";
+							}else{
+								$(".error-tip").show();
+								$(".error-tip").html("请勾选注册条款！")
+							}
+						})
+						});
+						
+					}else{
+						$(".error-tip").show();
+						$(".error-tip").html("请填写正确的手机号")
+						$(".test").click(function(){
+							
+							$(".error-tip").hide();
+						})
+					}
+				})
+			})
 		</script>
 	</body>
 </html>

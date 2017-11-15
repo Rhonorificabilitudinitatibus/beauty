@@ -409,7 +409,7 @@
 				success: function(data) {
 					var str = "";
 //					console.log(data.data.rows.length);
-						
+					var arr = [];
 					for(var i = 0; i < data.data.rows.length; i++) {
 						//价格
 						var price = data.data.rows[i].price;
@@ -425,6 +425,7 @@
 						var left = data.data.rows[i].stock;
 //						console.log(data.data.rows[i]);
 						//console.log(price,like,clothes,pic,clothes_id);
+						arr.push(clothes_id);
 						if(i%10==4||i%10==9){
 //							背景图片
 							str += "<li style=margin-right:0><div id='one' style=background-image:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
@@ -438,6 +439,7 @@
 						$(".new_content #new_list").html(str);
 //						console.log(pic);
 					}
+					console.log(arr)
 					
 				},
 				error: function(data) {
@@ -490,7 +492,6 @@
 			            var scrollHeight = $('body').height();
 			            //剩余内容的高度
 			            var scrollWhole = scrollHeight - scrollTop;
-			            console.log(scrollWhole);
 			            if(scrollWhole < 1300){
 			            	num++; 
 			            	if(num<=7){
@@ -501,6 +502,7 @@
 				dataType: "jsonp",
 				success: function(data) {
 //					var str2 = str;
+					var arr2 = [];
 					for(var i = 0; i < data.data.list.length; i++) {
 						var price = data.data.list[i].discountPrice;
 						var like = data.data.list[i].itemLikes;
@@ -508,6 +510,7 @@
 						var pic = data.data.list[i].item_pc_img;
 						var clothes_id = data.data.list[i].item_id;
 						var left = data.data.list[i].itemInventory
+						arr2.push(clothes_id);
 						if(i%10==4||i%10==9){
 							str += "<li style=margin-right:0><div id='one' style=background:url(" + pic + ")></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>";
 						}else{
@@ -516,6 +519,7 @@
 						
 						$(".content_middle").find("#main_list").html(str);
 					}
+//					console.log(arr2)
 					
 				},
 				error: function(data) {

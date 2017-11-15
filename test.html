@@ -91,8 +91,9 @@
 				async:true,
 				dataType:"jsonp",
 				success:function(data){
-//					console.log(data.data.list);
+					console.log(data);
 					var str = "";
+					var arr=[];
 					for(var i = 0; i < data.data.list.length; i++){
 						var price = data.data.list[i].discountPrice;
 						var like = data.data.list[i].itemLikes;
@@ -103,11 +104,12 @@
 						var clothes_id = data.data.list[i].item_id;
 						var left = data.data.list[i].itemInventory
 //						console.log(data.data.list[i]);
-						console.log(pic1)
+						arr.push(clothes_id);
 //						console.log(price,like,clothes,pic,clothes_id);
-						str += "<li><div id='one'>" + "<img src=" + pic +"></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>"
+						str += "<li><div id='one'><a target='_blank' href='detail.html?id="+ clothes_id + "'><img src=" + pic +"></div><div class='part'><div class='price'>￥" + price + "</div><div class='like'><i class='star'></i>" + like + "</div></div><div class='end'><i class='icon_logo'></i>" + intro + "</div></li>"
 						$("ul").html(str);
 					}
+					console.log(arr);
 					
 				},
 				error:function(data){

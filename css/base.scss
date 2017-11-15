@@ -8,9 +8,118 @@ a{text-decoration:none; color:#333;}
 h1,h2,h3,h4,h5,h6{font-weight:100;}
 body{ font-family:"微软雅黑";}
 input,a{outline:none;}
+//网页最顶端
+#top_nav_wrap{
+        width:100%;
+        background: #F8F8F8;
+        .top_nav{
+           width: 1200px;
+           height: 30px;
+           margin: 0 auto;
+           font-size: 12px;
+           line-height: 30px;
+           text-align: right;
+           li{
+               float: left;
+               a{
+                   display: inline-block;
+                   height: 20px;
+                   line-height: 20px;
+                   padding: 0 18px;
+                   color: rgb(102, 102, 102);
+                   border-right: 1px dotted #ccc;
+                   &:hover{
+                       color:#FF3366;
+                   }
+              
+                   em{
+                       display: inline-block;
+                       width: 18px;
+                       height: 16px;
+                       margin-right: 7px;
+                       text-align: center;
+                   }
+                   .home{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: 0 0;
+                       vertical-align: sub;
+                   }
+                   .weixin{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -25px 0;
+                       vertical-align: sub;
+                   }
+                   .qq{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -52px 0;
+                       vertical-align: sub;
+                   }
+                   .cart{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -102px 0;
+                       vertical-align: sub;
+                   }
+                   .collect{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -76px 0;
+                       vertical-align: sub;
+                   }
+                   .order{
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -130px 0;
+                       vertical-align: sub;
+                   }
+                   .arrow{
+                       width: 6px;
+                       height: 16px;
+                       margin-left: 10px;
+                       background: url(../img/nav241x16.png) no-repeat;
+                       background-position: -180px 0;
+                       vertical-align: sub;
+                   }
+                   
+               }
+             .last{
+                   border: none;
+               }
+           }
+           .go-home{
+               margin-right: 181px;
+               a{
+                   border: none;
+               }
+           }
+           .drop{
+               .down{
+                   width: 86px;
+                   height: 78px;
+                   display: none;
+                   padding: 8px 0;
+                   margin-left: -1px;
+                   background:#F8F8F8;
+                   position: absolute;
+                   top:30px;
+                   z-index: 1;
+                   border: 1px solid rgb(238, 238, 238);
+                 li{
+                   clear: left;
+                   a{
+                       border: none;
+                       margin-bottom: 3px;
+                   }
+                }  
+             }
+             &:hover{
+                 .down{
+                     display: block;
+                 }
+             }
+           }
+        }
+    }
+
 
 //网页最底部
-/*哈哈哈*/
 #footer_wrap{
     width: 100%;
     margin-top: 15px;
