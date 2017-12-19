@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+	</head>
+	<body>
+		<!--顶部导航区-->
+		<div id="header" class="J_sitenav header_2015">
+			<div class="wrap clearfix">
+				<a href="index.html" class="home fl">美丽说首页</a>
+				<ul class="header_top">
+					<li class="s1 has_icon user_meta">
+						<a href="javascript:;">
+							╯﹏╰_qqnS
+						</a>
+						<a href="javascript:;"></a>
+						<i class="icon_delta"></i>
+						<ol class="ext_mode" id="menu_personal">
+							<li class="s2">
+								<a href="javascript:;">
+									个人设置
+								</a>
+							</li>
+							<li class="s2">
+								<a href="javascript:;">
+									退出
+								</a>
+							</li>
+						</ol>
+					</li>
+					<li class="s1 has_icon has_line user_fav">
+						<a href="javascript:;">我的收藏</a>
+						<i class="icon_delta"></i>
+						<ul class="ext_mode">
+							<li class="s2">
+								<a href="javascript:;">
+									收藏宝贝
+								</a>
+							</li>
+							<li class="s2">
+								<a href="javascript:;">
+									收藏店铺
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="s1 myorder has_line">
+						
+					</li>
+					<li class="s1 has_line shopping_cart_v2">
+						<a class="cart_info_wrap" href="javascript:;">
+							<span class="cart_info">购物车</span>
+						</a>
+						<i class="icon_delta"></i>
+						<span class="shopping_cart_loading"></span>
+						<div class="shop_cart_info empty_cart">
+							购物车里没有商品！
+						</div>
+					</li>
+					<li class="s1 has_line has_icon custom_item">
+						<a href="javascript:;">
+							帮助中心
+						</a>
+						<i class="icon_delta"></i>
+						<ol class="ext_mode">
+							<li class="s2">
+								<a href="javascript:;">
+									买家服务
+								</a>
+							</li>
+							<li class="s2">
+								<a href="javascript:;">
+									商家服务
+								</a>
+							</li>
+							<li class="s2">
+								<a href="javascript:;">
+									规则中心
+								</a>
+							</li>
+						</ol>
+					</li>
+					<li class="s1 has_line has_icon">
+						<a href="javascript:;" class="text display_u">
+							商家后台
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--中间长条-->
+		<!--<div id="body_wrap">
+			<div class="g-header clearfix">
+				<div class="g-header-in wrap clearfix">
+					<div class="process-bar">
+						<div class="md_process md_process_len4">
+							<div class="md_process_wrap md_process_step1_5">
+								<div class="md_process_sd">
+									<i class="md_process_i md_process_i1">
+										1
+										<span class="md_process_tip">购物车</span>
+									</i>
+									<i class="md_process_i md_process_i2">
+										2
+										<span class="md_process_tip">确认订单</span>
+									</i>
+									<i class="md_process_i md_process_i3">
+										3
+										<span class="md_process_tip">支付</span>
+									</i>
+									<i class="md_process_i md_process_i4">
+										<span class="md_process_tip">完成</span>
+									</i>
+								</div>
+							</div>
+						</div>-->
+		<div class="mid-wrap">
+			<div class="logo-cart">
+				<a href="index.html">
+					<img src="img/logo408x104.png" />
+				</a>
+			</div>
+		</div>			
+		
+					<!--</div>
+				</div>
+			</div>
+		</div>-->
+		<!--中间区域-->
+		<!--购物车为空时-->
+		<div class="mid-cart-wrap">
+			<div class="mid-cart">
+				<img src="img/empty.png" class="gone"/>
+			</div>
+		</div>
+		<!--购物车不为空时-->
+
+		<div class="cart-wrap">
+			<div class="shop">
+				<table border="0" cellspacing="0" cellpadding="">
+					<thead>
+						<tr class="up">
+							<td>
+								<input type="checkbox" class="choose" id="ss"/>
+								<label for="ss">全选</label>
+							</td>
+							<td>商品</td>
+							<td>商品信息</td>
+							<td>单价（元）</td>
+							<td class="one">数量</td>
+							<td>小计（元）</td>
+							<td>操作</td>
+						</tr>
+					</thead>
+					
+						
+					<tbody>
+					</tbody>
+						<!--<td>
+							<input type="checkbox" class="choose_item"/>
+						</td>
+						<td class="pic_size">
+							<img src="img/1.jpg"/>
+						</td>
+						<td>
+							颜色：<span class="item_color">紫色</span><br />
+							尺码：<span class="item_size">M</sapn>
+						</td>
+						<td class="ce">59.00</td>
+						<td class="ce count">
+							<div class="goods_num">
+								<em class="de"></em>
+								<input type="text" class="item_num"/>
+								<em class="in"></em>
+							</div>
+							
+						</td>
+						<td class="ce">118</td>
+						<td class="clear">删除</td>-->
+					
+				<tfoot>
+					<tr>
+						<td class="delete">全部删除</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="pay_all">
+							总计：
+							<span class="all_item_price"></span>
+						</td>
+						<td class="end">
+							<a href="###" class="pay">付款</a>
+						</td>
+					</tr>
+				</tfoot>
+					
+				</table>
+			</div>
+		</div>
+		<!--底部信息-->
+		<div class="footer-wrap">
+			<footer>
+				<p>
+					<a href="index.html">美丽说</a>
+					
+        © 2016 Meilishuo.com,All Rights Reserved.
+    
+				</p>
+			</footer>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.get("json/detail1.json",function(data){
+					var strCookie = $.cookie("cart");
+					var objCookie = strCookie ? JSON.parse(strCookie):{};
+					console.log(strCookie);
+					var str = "";
+					for(var attr in objCookie){
+						str += '<tr class="sick"><td><input type="checkbox" class="choose_item"/></td><td class="pic_size"><img src=' +  data[attr].thumbnail + '></td><td>颜色：<span class="item_color">' + data[attr].style + '</span><br />尺码：<span class="item_size">' + data[attr].size + '</span></td><td class="ce">' + data[attr].price + '</td><td class="ce count"><div class="goods_num"><em class="de"></em><input type="text" class="item_num" value=' + objCookie[attr] + '><em class="in"></em></div></td><td class="ce">' + data[attr].price*objCookie[attr] + '</td><td class="clear" data-id=' + attr + '>删除</td><tr>'
+					}
+					$("tbody").html(str);
+					$(".choose_item").click(function(){
+				
+						console.log($(this).index())
+					})
+					$(".clear").click(function(){
+						$(this).parents("tr").remove();
+						var id = $(this).attr("data-id");
+						console.log(id);
+						delete objCookie[id];
+						var strCookie = JSON.stringify(objCookie);
+						$.cookie("cart",strCookie,{path:"/"});
+						
+						
+						});
+						$(".delete").click(function(){
+							$("tbody").children("tr").remove();
+							console.log()
+							objCookie = {};
+							var strCookie = JSON.stringify(objCookie);
+							$.cookie("cart",strCookie,{path:"/"});
+							$(".cart-wrap").css("display","none");
+							$(".mid-cart-wrap").css("display","block");
+					})
+						
+					$(".choose,label").click(function(){
+						var flag = $(".choose").prop("checked");
+						console.log(flag);
+						$("tbody").find("input[type=checkbox]").prop("checked",flag);
+					})
+				})
+			})
+						
+		</script>
+	</body>
+</html>
