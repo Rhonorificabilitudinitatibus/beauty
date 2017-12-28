@@ -758,10 +758,10 @@
 						strSize += '<li>' + data[id].size[i] + '</li>'
 					}
 					//这是大图
-					var strBigImg = "";
-					for(var i = 0; i < data[id].bigimg.length; i++){
-						strBigImg += '<img src=' + data[id].bigimg[i] + '>'
-					}
+//					var strBigImg = "";
+//					for(var i = 0; i < data[id].bigimg.length; i++){
+//						strBigImg += '<img src=' + data[id].bigimg[i] + '>'
+//					}
 					//这是小图
 					var strSmallImg = "";
 					for(var i = 0; i < data[id].smallimg.length; i++){
@@ -829,9 +829,6 @@
 						cookie(id,num,false);
 						alert("加入购物车成功！")
 					})
-					
-					
-					
 				},
 				error:function(data){
 					console.log(data, data.status);
